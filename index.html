@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business</title>
+    <!-- Using Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- 1. Add Splide CSS to the <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/base-responsive.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main-responsive.css" />
+
+    <!-- Splide CDN  -->
+
+    <!-- 2. Add Splide JS to the bottom of the <body> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  </head>
+  <body>
+    <!-- 1. HEADER / NAVIGATION -->
+    <header>
+      <nav class="navbar-section">
+        <div class="navbar container">
+          <a href="./index.html">
+            <div class="logo">BUSINESS</div>
+          </a>
+
+          <!-- 1. Hidden Checkbox -->
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+          <!-- 2. Hamburger Icon -->
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./blogs.html">Blogs</a></li>
+          </ul>
+
+          <div class="nav-cta">
+            <a> <i class="fas fa-phone"></i> +977 6543210 </a>
+            <button onclick="goToContact()" class="btn-small">
+              FREE CONSULTATION
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- 2. HERO SECTION -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <h4>BUILDING AND EXPANDING</h4>
+              <h1>Your Company Or <span class="highlight">Startup</span></h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              </p>
+              <div class="hero-btns">
+                <button class="btn-primary">GET IN TOUCH</button>
+                <button class="btn-outline">VIEW PORTFOLIO</button>
+              </div>
+            </div>
+            <div class="hero-img">
+              <img src="./images/thinkman.png" alt="Business Illustration" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CLIENT LOGOS -->
+      <section class="logo-bar">
+        <div class="container logo-flex" id="logo-container">
+          <!-- JavaScript will inject logos here -->
+        </div>
+      </section>
+
+      <!-- 4. STRATEGY SECTION  -->
+      <section class="strategy-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <h2>
+              Build A <span class="highlight">Strategy</span> That Puts An Your
+              Money To Work.
+            </h2>
+          </div>
+          <div class="strategy-grid">
+            <div class="strategy-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur sit amet eros blandit, hendrerit elit et, mattis
+                purus. Vivamus commodo suscipit tellus et pellentesque.
+              </p>
+              <ul class="strategy-list">
+                <li>Planing your Future Better</li>
+                <li>Financial planing for safe investment</li>
+                <li>Experience a brand new financial attitude</li>
+                <li>Your financial matters according our plans</li>
+              </ul>
+              <button class="btn-primary">VIEW PORTFOLIO</button>
+            </div>
+            <div class="strategy-img">
+              <img src="./images/skyscraper.png" alt="City Strategy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. SERVICES SECTION -->
+      <section class="services-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <h2>We Provide The Best <span class="highlight">Services</span></h2>
+          </div>
+          <div class="services-grid" id="services-grid">
+            <!-- Code From The Javascript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. BUILD SOMETHING CTA -->
+      <section class="cta-banner">
+        <div class="container">
+          <div class="cta-grid">
+            <div class="cta-heading">
+              <span>
+                Let's build something <span class="highlight">awesome</span>
+              </span>
+            </div>
+            <div class="cta-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                ac lorem pretium, laoreet enim at, malesuada elit. Class aptent
+                taciti sociosqu
+              </p>
+
+              <div class="cta-btn">
+                <button class="btn-primary">GET IN TOUCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. PROJECTS / PORTFOLIO -->
+      <section class="projects-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <h2>
+              Check out our latest <span class="highlight">projects</span>
+            </h2>
+          </div>
+          <div class="projects-grid" id="projects-grid">
+            <!-- Code From The Javascript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. TESTIMONIAL SECTION -->
+      <section class="testimonial-section section-padding">
+        <div class="container">
+          <section
+            class="splide"
+            id="testimonial-slider"
+            aria-label="Testimonial Slider"
+          >
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./images/arrow.png" alt="" />
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./images/arrow.png" alt="" />
+              </button>
+            </div>
+            <div class="splide__track">
+              <ul class="splide__list" id="js-testi-container">
+                <!-- JS will inject slides here -->
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- 9. BLOG SECTION -->
+      <section class="blog-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <h2><span class="highlight">Blog</span> & Articles</h2>
+          </div>
+          <div class="blog-grid" id="blog-grid">
+            <!-- JavaScript will inject cards here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. CONTACT SECTION -->
+      <section class="contact-section section-padding">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <span class="highlight get-in-touch">GET IN TOUCH</span>
+              <h2>
+                Let's Talk About <span class="highlight">Your Growth.</span>
+              </h2>
+              <p>
+                Get ready for hyper-growth. You’ll receive direct access to the
+                same mind that helped similar fast start-ups quadruple their
+                revenue in a couple of years. It’s time to take the thinking out
+                of marketing and start growing.
+              </p>
+              <div class="contact-links">
+                <div class="item">
+                  <a href="mailto:business@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <div class="contact-link">
+                    <span class="contact-title">Email</span>
+                    <a href="mailto:business@gmail.com">business@gmail.com</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <a href="tel:+9779876543210">
+                    <i class="fas fa-phone"></i>
+                  </a>
+                  <div class="contact-link">
+                    <span class="contact-title">Phone</span>
+                    <a href="tel:+9779876543210">+977 9876543210</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="contact-form">
+              <form class="consultation-form" method="POST">
+                <div class="form-inputs">
+                  <div class="form-group">
+                    <label for="name">Your Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Your Phone Number</label>
+                    <input type="text" id="phone" class="form-control" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">How Can We Help You?</label>
+                    <textarea
+                      id="message"
+                      class="form-control"
+                      rows="1"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                  GET YOUR FREE CONSULTATION
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 11. FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="container">
+          <a href="./index.html">
+            <div class="footer-logo">BUSINESS</div>
+          </a>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-seperation"></div>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="copyright">
+            Copyright © 2023 Business | Powered by FnClick
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/website-function.js"></script>
+    <script src="./js/logo-bar.js"></script>
+    <script src="./js/services-grid.js"></script>
+    <script src="./js/projects-grid.js"></script>
+    <script src="./js/testimonial-slider.js"></script>
+    <script src="./js/blog-grid.js"></script>
+  </body>
+</html>

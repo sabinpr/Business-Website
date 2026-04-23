@@ -1,0 +1,86 @@
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Laptops / Small Desktops (under 1200px) */
+@media (max-width: 1200px) {
+  :root {
+    --gap-side: 8rem;
+    --gap-vertical: 8rem;
+    --gap-inner-page: 9rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+/* Tablets (under 992px) */
+@media (max-width: 992px) {
+  :root {
+    --gap-side: 5rem;
+    --gap-vertical: 7rem;
+    --gap-inner-page: 8rem;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  :root {
+    --gap-side: 2rem; /* Standard mobile padding */
+    --gap-vertical: 6rem;
+    --gap-inner-page: 7rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+
+  /* Ensure h2 isn't too narrow on mobile */
+  h2 {
+    max-width: 100%;
+  }
+
+  .section-heading {
+    margin-bottom: 4rem;
+  }
+
+  /* Stack flex items (like your form or grid) if they exist */
+  .form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Small Phones (under 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%; /* Slightly scale down everything for very small screens */
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+
+  button {
+    width: 100%; /* Full width buttons look better on small phones */
+  }
+}

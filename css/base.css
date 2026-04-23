@@ -1,0 +1,181 @@
+@import url("https://fonts.cdnfonts.com/css/jost");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+:root {
+  /* Font */
+  --heading-font: "Jost*", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  /* Colors */
+  --black-primary: #070606;
+  --black-secondary: #141212;
+  --primary: #f52020;
+  --white: #ffffff;
+  --text-gray: #a6a3a3;
+  --nav-gray: #f5f3ef;
+  --border: #303030;
+  /* Global Width and padding  */
+  --max-width: 1440px;
+  --gap-side: 13.5rem;
+  --gap-vertical: 10rem;
+  --gap-inner-page: 12rem;
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--white);
+  background-color: var(--black-primary);
+
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Edge */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 var(--gap-side);
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 4.6rem;
+  line-height: 5.6rem;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  max-width: 570px;
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: clamp(2rem, 2.4vw, 2.8rem);
+  line-height: clamp(3rem, 3.4vw, 3.8rem);
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+h4 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.1vw, 2.4rem);
+  line-height: clamp(2.8rem, 3.1vw, 3.4rem);
+  letter-spacing: 0%;
+}
+
+h5 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+p {
+  font-family: var(--body-font);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0%;
+}
+
+.p-2 {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+button {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-white);
+  padding: 1.2rem 3rem;
+  border: none;
+}
+.btn-outline {
+  background: transparent;
+  padding: 1.2rem 3rem;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.btn-small {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.9rem 2.4rem;
+  border: none;
+}
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-small:hover {
+  background: var(--white);
+  color: var(--black-secondary);
+}
+a {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: var(--white);
+}
+.link-primary {
+  color: var(--primary);
+}
+.link-primary:hover {
+  color: var(--white);
+}
+
+.section-padding {
+  padding: var(--gap-vertical) 0;
+}
+.inner-padding {
+  padding: var(--gap-inner-page) 0;
+}
+.section-padding-top {
+  margin-top: 10rem;
+  padding: calc(var(--gap-vertical) + 2.5rem) 0;
+}
+.section-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
