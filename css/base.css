@@ -30,16 +30,19 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  /* Prevent Safari from overriding font sizes */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--body-font);
   color: var(--white);
   background-color: var(--black-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-  -webkit-font-smoothing: antialiased; /* Chrome, Safari, Edge */
-  -moz-osx-font-smoothing: grayscale; /* Firefox */
-  text-rendering: optimizeLegibility;
+  /* FIXED: Removed optimizeLegibility for Safari stability */
+  text-rendering: auto;
 }
 
 .container {
@@ -128,7 +131,7 @@ button {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--text-white);
+  color: var(--white);
   padding: 1.2rem 3rem;
   border: none;
 }
