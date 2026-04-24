@@ -406,9 +406,10 @@
 .quote-icon-blog {
   font-family: var(--extra-font);
   font-weight: 400;
-  font-size: 78px;
-  line-height: 26px;
+  font-size: 7.8rem;
+  line-height: 2.6rem;
   letter-spacing: 0%;
+  user-select: none;
 }
 .blog-description {
   margin-bottom: 3rem;
@@ -498,10 +499,13 @@
     padding: 4rem 3rem;
   }
   .blog-tag {
-    gap: 1rem 6rem;
+    gap: 1rem 8rem;
   }
   .tag-flex {
-    gap: 1rem 3rem;
+    gap: 1rem 4rem;
+  }
+  .quote-icon-blog {
+    font-size: 6.8rem;
   }
 }
 @media (max-width: 480px) {
@@ -516,10 +520,13 @@
     padding: 3rem 2rem;
   }
   .blog-tag {
-    gap: 1rem 4rem;
+    gap: 1rem 5rem;
   }
   .tag-flex {
-    gap: 1rem 2rem;
+    gap: 1rem 2.5rem;
+  }
+  .quote-icon-blog {
+    font-size: 5.8rem;
   }
 }
 
