@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <li class="splide__slide">
               <div class="testimonial-content">
                   <img src="${item.image}" alt="${item.name}" class="user-img" />
-                  <div class="quote-icon">“</div> 
+                  <span class="quote-icon">“</span> 
                   <p>${item.quote}</p>
                   <span class="testimonial-author highlight">${item.name}</span>
                   <span class="author-position highlight">${item.position}</span>

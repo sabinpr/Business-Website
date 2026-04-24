@@ -271,7 +271,27 @@ const blogsData = [
 let visibleCount = 9;
 const increment = 9;
 
-// 2. RENDER LOGIC
+/**
+ * HELPER: Generates the HTML for a single blog card
+ * This prevents duplicating the HTML string in multiple functions
+ */
+const createBlogCardHTML = (blog) => `
+  <div class="blog-card">
+      <a href="${blog.link}" class="blog-img-wrapper">
+          <img src="${blog.image}" alt="${blog.title}" />
+      </a>
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span class="category">${blog.category}</span>
+          <span class="date">${blog.date}</span>
+        </div>
+        <h4>${blog.title}</h4>
+        <a href="${blog.link}" class="link-primary">Read more</a>
+      </div>
+    </div>
+`;
+
+// 2. RENDER LOGIC FOR MAIN LISTING
 function renderBlogs() {
   const blogGrid = document.getElementById("blog-grid");
   const loadMoreBtn = document.getElementById("load-more-btn");
@@ -279,39 +299,42 @@ function renderBlogs() {
   if (!blogGrid) return;
 
   const visibleBlogs = blogsData.slice(0, visibleCount);
+  blogGrid.innerHTML = visibleBlogs.map(createBlogCardHTML).join("");
 
-  const html = visibleBlogs
-    .map(
-      (blog) => `
-        <div class="blog-card">
-            <a href="${blog.link}" class="blog-img-wrapper">
-                <img src="${blog.image}" alt="${blog.title}" />
-            </a>
-            <div class="blog-content">
-              <div class="blog-meta">
-                <span class="category">${blog.category}</span>
-                <span class="date">${blog.date}</span>
-              </div>
-              <h4>${blog.title}</h4>
-              <a href="${blog.link}" class="link-primary">Read more</a>
-            </div>
-          </div>
-    `,
-    )
-    .join("");
-
-  blogGrid.innerHTML = html;
-
-  //   HIde Button
-  if (visibleCount >= blogsData.length) {
-    loadMoreBtn.style.display = "none";
+  // Handle Load More Button Visibility
+  if (loadMoreBtn) {
+    if (visibleCount >= blogsData.length) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "block";
+    }
   }
 }
 
-// 4. EVENT LISTENER FOR BUTTON
-document.getElementById("load-more-btn").addEventListener("click", function () {
-  visibleCount += increment; // Increase the count
-  renderBlogs(); // Re-render
-});
+// 3. RENDER LOGIC FOR RELATED BLOGS (Detail Page)
+const renderBlogDetail = () => {
+  const blogsDetailGrid = document.getElementById("blog-detail-grid");
+  if (!blogsDetailGrid) return;
 
-renderBlogs();
+  // Get 3 random blogs
+  const randomBlogs = [...blogsData]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+
+  blogsDetailGrid.innerHTML = randomBlogs.map(createBlogCardHTML).join("");
+};
+
+// 4. INITIALIZATION & EVENT LISTENERS
+document.addEventListener("DOMContentLoaded", () => {
+  renderBlogs();
+  renderBlogDetail();
+
+  // SAFETY CHECK: Only add listener if button exists on current page
+  const loadMoreBtn = document.getElementById("load-more-btn");
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", function () {
+      visibleCount += increment;
+      renderBlogs();
+    });
+  }
+});
