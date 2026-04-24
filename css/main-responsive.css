@@ -363,7 +363,10 @@ header.scrolled .logo {
     grid-template-columns: 1fr;
   }
   .contact-info {
-    margin: 2rem auto;
+    margin: 2rem 0;
+  }
+  .contact-info p {
+    max-width: 100%;
   }
   .contact-links {
     margin-top: 8rem;
@@ -407,5 +410,15 @@ header.scrolled .logo {
   }
   .social-links i {
     font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .form-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .consultation-form {
+    max-width: 100%;
   }
 }
