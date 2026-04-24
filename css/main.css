@@ -16,6 +16,7 @@
   letter-spacing: 0%;
   text-transform: uppercase;
   padding: 2.4rem 0;
+  transition: var(--transition);
 }
 
 .nav-links {
@@ -668,7 +669,7 @@
 .footer-links li a {
   font-family: var(--body-font);
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.7vw, 1.8rem);
   line-height: clamp(2.4rem, 2.6vw, 2.8rem);
   letter-spacing: 0%;
   color: var(--nav-gray);

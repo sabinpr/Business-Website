@@ -1,9 +1,14 @@
 /* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1368px) {
+  :root {
+    --gap-side: 4.2rem;
+  }
+}
 
 /* Laptops / Small Desktops (under 1200px) */
 @media (max-width: 1200px) {
   :root {
-    --gap-side: 8rem;
+    --gap-side: 4rem;
     --gap-vertical: 8rem;
     --gap-inner-page: 9rem;
   }
@@ -17,7 +22,7 @@
 /* Tablets (under 992px) */
 @media (max-width: 992px) {
   :root {
-    --gap-side: 5rem;
+    --gap-side: 3rem;
     --gap-vertical: 7rem;
     --gap-inner-page: 8rem;
   }

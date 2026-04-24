@@ -76,30 +76,39 @@ header.scrolled .logo {
   }
 
   /* --- MOBILE MENU DRAWER --- */
+
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    position: fixed; /* Changed from absolute */
+    top: 0; /* Changed from 100% */
+    right: 0;
+    max-width: 280px; /* Fixed width for sidebar */
+    width: 80%;
+    height: 100vh; /* Full screen height */
     background: var(--black-secondary);
     flex-direction: column;
-    gap: 0; /* Remove gaps so items touch each other */
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
+    gap: 0;
     z-index: 100;
+
+    /* Animation Changes */
+    transform: translateX(100%); /* Hide to the left */
+    transition: transform 0.4s ease-in-out;
+    overflow-y: auto; /* Scrollable if links are long */
+    padding-top: 80px; /* Keeps links below the toggle button */
   }
 
   .nav-links li {
-    width: 100%; /* Ensure list item spans full width */
+    width: 90%; /* Ensure list item spans full width */
     display: block; /* Remove flex centering if it blocks width */
   }
 
   .nav-links a {
+    text-align: left; /* Changed from center */
+    padding: 1.5rem 2rem;
+
     display: block; /* KEY: Makes the link a block level element */
     width: 100%; /* KEY: Makes the link fill the whole row width */
     padding: 2rem; /* KEY: Adds vertical/horizontal space to the clickable area */
-    text-align: center;
+    /* text-align: center; */
     font-size: 2rem;
     border-bottom: 1px solid var(--border);
     transition: background 0.3s ease;
@@ -113,8 +122,13 @@ header.scrolled .logo {
 
   /* Toggle Logic */
   .nav-toggle:checked ~ .nav-links {
-    max-height: 500px;
-    border-top: 2px solid var(--primary);
+    transform: translateX(0); /* Slides the sidebar in */
+    border-left: 2px solid var(--primary); /* Optional visual edge */
+  }
+
+  .nav-toggle-label {
+    position: relative;
+    z-index: 101; /* Must be higher than .nav-links z-index */
   }
 
   /* X Animation */
@@ -269,7 +283,10 @@ header.scrolled .logo {
   .strategy-grid {
     grid-template-columns: 1fr; /* Stack columns into one */
     gap: 5rem; /* Space between text and image */
-    place-items: center;
+    /* place-items: center; */
+  }
+  .strategy-img {
+    max-width: 100%;
   }
   .quote-icon {
     margin-left: 0;

@@ -43,6 +43,7 @@ body {
 
   /* FIXED: Removed optimizeLegibility for Safari stability */
   text-rendering: auto;
+  transition: var(--transition);
 }
 
 .container {
