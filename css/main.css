@@ -358,6 +358,7 @@
   width: clamp(6rem, 8vw, 10rem);
   border-radius: 50%;
 }
+
 .quote-icon {
   font-family: var(--body-font);
   font-size: 12.8rem;
@@ -366,13 +367,14 @@
   margin-top: -2rem;
   margin-bottom: -11rem;
   font-weight: 700;
-  display: block;
   user-select: none;
   font-weight: 400;
   letter-spacing: 0%;
-
-  transform: translateX(-41rem);
+  display: block;
+  display: flex;
+  justify-content: flex-start;
   opacity: 0.15;
+  margin-left: clamp(0.5rem, 3vw, 5rem);
 }
 
 /* Adjust the quote paragraph to fit nicely below the mark */
@@ -538,6 +540,7 @@
   max-width: 500px;
   justify-content: space-between;
   margin-top: 13rem;
+  gap: 1.5rem;
 }
 .item {
   display: flex;

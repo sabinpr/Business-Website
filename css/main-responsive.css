@@ -272,8 +272,7 @@ header.scrolled .logo {
     place-items: center;
   }
   .quote-icon {
-    /* Bring it closer to the center as the screen shrinks */
-    transform: translateX(-25rem);
+    margin-left: 0;
     font-size: 10rem;
     margin-bottom: -9rem; /* Adjust overlap for smaller font */
   }
@@ -286,8 +285,8 @@ header.scrolled .logo {
     grid-template-columns: repeat(3, 1fr);
   }
   .quote-icon {
-    /* Bring it closer to the center as the screen shrinks */
-    transform: translateX(-31rem);
+    margin-left: 0rem;
+    font-size: 11rem;
   }
 }
 
@@ -317,11 +316,9 @@ header.scrolled .logo {
     grid-template-columns: repeat(2, 1fr);
   }
   .quote-icon {
-    /* Move it back to the center top instead of the left side */
-    transform: translateX(-20rem);
     font-size: 8rem;
-    margin-top: 0;
-    margin-bottom: -6rem; /* Standard overlap for mobile */
+    margin-bottom: -6rem;
+    margin-left: 1rem;
   }
 }
 @media (max-width: 480px) {
@@ -336,7 +333,9 @@ header.scrolled .logo {
     aspect-ratio: 4/3;
   }
   .quote-icon {
-    display: none;
+    font-size: 6rem;
+    margin-bottom: -5rem;
+    margin-left: 0;
   }
 }
 
